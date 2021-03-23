@@ -1,0 +1,15 @@
+@import "../../styles/constants";
+
+@import "../../styles/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: $header-top-margin $wrapper-margin 0 $wrapper-margin;
+
+  &_logo,
+  &_burger {
+
+    @include hovered-svg;
+  }
+}

@@ -1,20 +1,26 @@
 @import "normalize.css";
+
 @import "constants";
+
 @import "fonts";
+
+@import "mixins";
+
+@import "../components/header/header";
+
+@import "../components/agency/agency";
 
 .app {
   max-width: 1300px;
   margin: 0 auto;
 }
 
-header {
-  font-family: "Montserrat", sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  font-stretch: normal;
+body {
   font-style: normal;
   line-height: 1;
   letter-spacing: normal;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   color: #60606e;
+  font-stretch: normal;
 }

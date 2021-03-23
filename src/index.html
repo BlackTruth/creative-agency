@@ -6,8 +6,10 @@
     <title>Creative agency</title>
   </head>
   <body class="app">
-    <%= require('html-loader!./header.html').default %>
-    <main></main>
+    <%= require('html-loader!./components/header/header.html').default %>
+    <main>
+      <%= require('html-loader!./components/agency/agency.html').default %>
+    </main>
     <footer></footer>
   </body>
 </html>

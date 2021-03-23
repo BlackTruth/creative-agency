@@ -1,0 +1,35 @@
+@import "constants";
+
+@mixin hovered-svg {
+  cursor: pointer;
+
+  &:hover {
+    filter: $accent-color-filter;
+  }
+}
+
+@mixin title {
+  position: relative;
+  width: max-content;
+  font-size: 30px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &::before {
+    position: absolute;
+    top: 23px;
+    left: 1px;
+    z-index: -1;
+    width: 67px;
+    height: 21px;
+    background-color: $accent-color;
+    content: "";
+  }
+}
+
+@mixin description($font-size: 16px, $line-height: 1.5) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: "OpenSans", sans-serif;
+}
