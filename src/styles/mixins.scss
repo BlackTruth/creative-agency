@@ -64,3 +64,9 @@
   line-height: $line-height;
   font-family: "OpenSans", sans-serif;
 }
+
+@mixin list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
