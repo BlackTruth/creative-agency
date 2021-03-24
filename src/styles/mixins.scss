@@ -5,6 +5,37 @@
 
   &:hover {
     filter: $accent-color-filter;
+    transition: filter 0.3s ease;
+  }
+}
+
+@mixin button($width: 165px, $invert: false) {
+  $color: $button-font-color;
+  $background: $accent-color;
+  $color-hover: $color;
+  $background-hover: darken($background, 10%);
+
+  @if $invert {
+    $color: $accent-color;
+    $background: $button-font-color;
+    $color-hover: darken($color, 10%);
+    $background-hover: $background;
+  }
+  width: $width;
+  height: 50px;
+  font-size: 14px;
+  color: $color;
+  background-color: $background;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $background-hover;
+
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
 }
 
