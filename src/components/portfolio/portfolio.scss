@@ -43,13 +43,14 @@
     }
 
     &_button {
+
       @include button($width: 67px);
-      width: 67px;
       height: 21px;
       font-size: 14px;
     }
 
     &_list {
+
       @include list;
       padding-left: 19px;
       font-size: 14px;
@@ -62,14 +63,16 @@
     grid-column: 2 / 5;
     grid-row: 2 / 5;
     display: flex;
+
     &__column {
       flex: 33.3%;
       max-width: 33.3%;
       padding: 0 15px;
+
       &_picture {
+        width: 100%;
         margin-top: 30px;
         vertical-align: middle;
-        width: 100%;
       }
     }
   }
