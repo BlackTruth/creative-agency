@@ -27,7 +27,6 @@
     }
 
     &_button {
-
       @include button($invert: true);
     }
   }
@@ -68,6 +67,8 @@
         color: $input-text-color;
         border: none;
         text-transform: uppercase;
+        box-shadow: 0 0 0 0 white;
+        transition: box-shadow 0.3s ease;
 
         &::placeholder {
           color: $input-text-color;
@@ -76,11 +77,11 @@
         &:focus {
           color: $main-font-color;
           outline: none;
+          box-shadow: 0 0 10px 3px rgba($accent-color, 0.5);
         }
       }
 
       &_button {
-
         @include button($width: 135px);
         padding: 0;
       }

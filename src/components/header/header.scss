@@ -3,7 +3,6 @@
 @import "../../styles/mixins";
 
 .header {
-
   a {
     position: absolute;
     top: 0;
@@ -17,8 +16,19 @@
 
     &_logo,
     &_burger {
-
       @include hovered-svg;
+    }
+
+    &_burger {
+      outline: none;
+      transform: rotateY(0deg);
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:focus {
+        transform: rotateY(360deg);
+        filter: $accent-color-filter;
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
     }
   }
 }

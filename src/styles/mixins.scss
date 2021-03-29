@@ -46,6 +46,7 @@
   line-height: 1.6;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: default;
 
   &::before {
     position: absolute;
@@ -56,6 +57,9 @@
     height: 21px;
     background-color: $accent-color;
     content: "";
+  }
+  &:hover::before {
+    animation: bounce 1.5s, bounce 1.5s reverse 1.5s;
   }
 }
 

@@ -42,20 +42,26 @@
       font-weight: bold;
     }
 
-    &_button {
-
-      @include button($width: 67px);
-      height: 21px;
-      font-size: 14px;
-    }
-
-    &_list {
-
+    &__list {
       @include list;
-      padding-left: 19px;
       font-size: 14px;
-      line-height: 3.43;
       text-transform: uppercase;
+      &_item {
+        width: max-content;
+        margin-top: 20px;
+        line-height: 1.5;
+        padding: 0 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &--selected,
+        &:hover {
+          background-color: $accent-color;
+          color: $button-font-color;
+        }
+        &:hover {
+          transition: all 0.2s ease-in-out;
+        }
+      }
     }
   }
 
@@ -73,6 +79,13 @@
         width: 100%;
         margin-top: 30px;
         vertical-align: middle;
+        transform: scale(1, 1);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1, 1.1);
+          transition: all 0.3s ease-in-out;
+        }
       }
     }
   }
