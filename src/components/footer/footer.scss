@@ -1,0 +1,66 @@
+@import "../../styles/constants";
+
+@import "../../styles/mixins";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px $wrapper-margin 50px $wrapper-margin;
+
+  &__menu {
+    padding: 0;
+    text-transform: uppercase;
+
+    @include description($font-size: 14px);
+
+    &_item {
+      display: inline;
+
+      a {
+
+        &:hover {
+          color: darken($accent-color, 10%);
+          transition: color 0.3s ease;
+        }
+        color: $alternate-font-color;
+        text-decoration: none;
+      }
+
+      &::after {
+        padding: 0 15px;
+        content: "-";
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+
+    &_copyright {
+      color: $alternate-font-color;
+      text-transform: uppercase;
+
+      @include description($font-size: 14px);
+    }
+
+    &__social {
+      align-self: flex-end;
+
+      &_item {
+        height: 16px;
+        filter: $social-media-color-filter;
+
+        &:not(&:last-child) {
+          padding-right: 10px;
+        }
+
+        @include hovered-svg;
+      }
+    }
+  }
+}

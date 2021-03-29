@@ -3,13 +3,22 @@
 @import "../../styles/mixins";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  margin: $header-top-margin $wrapper-margin 0 $wrapper-margin;
 
-  &_logo,
-  &_burger {
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-    @include hovered-svg;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: $header-top-margin $wrapper-margin 0 $wrapper-margin;
+
+    &_logo,
+    &_burger {
+
+      @include hovered-svg;
+    }
   }
 }

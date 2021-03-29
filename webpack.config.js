@@ -22,6 +22,13 @@ module.exports = {
         test: /\.s[ca]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /background.png$/i,
+        use: [
+          "file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]&esModule=false",
+          "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false",
+        ],
+      },
     ],
   },
   plugins: [
