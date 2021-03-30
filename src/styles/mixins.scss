@@ -50,7 +50,7 @@
 
   &::before {
     position: absolute;
-    top: 23px;
+    top: 22px;
     left: 1px;
     z-index: -1;
     width: 67px;
@@ -58,6 +58,7 @@
     background-color: $accent-color;
     content: "";
   }
+
   &:hover::before {
     animation: bounce 1.5s, bounce 1.5s reverse 1.5s;
   }

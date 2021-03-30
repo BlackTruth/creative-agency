@@ -3,11 +3,14 @@
 @import "../../styles/mixins";
 
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  margin: 50px $wrapper-margin 50px $wrapper-margin;
+  margin: 32px $wrapper-margin 50px $wrapper-margin;
 
   &__menu {
+    display: flex;
     padding: 0;
     text-transform: uppercase;
 
@@ -15,6 +18,7 @@
 
     &_item {
       display: inline;
+      align-self: flex-start;
 
       a {
 
@@ -42,10 +46,13 @@
     flex-direction: column;
 
     &_copyright {
+      align-self: flex-end;
+      margin-bottom: 23px;
+      letter-spacing: 0.1px;
       color: $alternate-font-color;
       text-transform: uppercase;
 
-      @include description($font-size: 14px);
+      @include description($font-size: 13px, $line-height: 1.7);
     }
 
     &__social {
@@ -56,7 +63,7 @@
         filter: $social-media-color-filter;
 
         &:not(&:last-child) {
-          padding-right: 10px;
+          padding-right: 12px;
         }
 
         @include hovered-svg;

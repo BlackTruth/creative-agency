@@ -5,8 +5,8 @@
 .choose {
   display: grid;
   grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 149px $wrapper-margin 0 $wrapper-margin;
+  grid-template-columns: 0.9fr 1fr 1fr;
+  margin: 138px $wrapper-margin 0 $wrapper-margin;
 
   &__header {
     grid-column: 1 / 4;
@@ -16,14 +16,17 @@
     align-items: center;
 
     &_title {
+      left: -2px;
       margin: 0;
+      letter-spacing: -1px;
 
       @include title;
     }
 
     &_desc {
       max-width: 717px;
-      margin: 10px 0 101px 0;
+      margin: 10px 0 98px 0;
+      letter-spacing: 0.3px;
 
       @include description($font-size: 14px, $line-height: 1.71);
     }
@@ -33,6 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 18px;
     text-transform: uppercase;
 
     &_icon {
@@ -41,14 +45,22 @@
     }
 
     &_title {
+      margin: 15px 0 17px 1px;
+      letter-spacing: -0.7px;
     }
 
     &_list {
-      list-style-type: none;
+      margin: 0;
       padding: 0;
       text-align: left;
+      list-style-type: none;
 
-      @include description($font-size: 14px, $line-height: 2.14);
+      @include description($font-size: 14px, $line-height: 2.2);
+
+      > li {
+        padding-left: 1px;
+        letter-spacing: -0.4px;
+      }
     }
   }
 

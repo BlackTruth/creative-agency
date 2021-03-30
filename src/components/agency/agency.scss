@@ -7,8 +7,8 @@
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   margin: $agency-top-margin $wrapper-margin 0 $wrapper-margin;
-  grid-column-gap: 127px;
-  grid-row-gap: 125px;
+  grid-column-gap: 29px;
+  grid-row-gap: 106px;
 
   &__header {
     display: flex;
@@ -18,7 +18,7 @@
     grid-row: 1;
 
     &_suffix {
-      padding: 10px 21px 7px 19px;
+      padding: 10px 18px 7px 18px;
       font-size: 18px;
       line-height: 13px;
       background-color: $accent-color;
@@ -29,10 +29,11 @@
     &_title {
       width: max-content;
       margin: 0;
-      padding: 22px 36px;
+      padding: 22px 36px 23px 36px;
       font-size: 48px;
       line-height: 35px;
-      letter-spacing: normal;
+      letter-spacing: -0.8px;
+      font-stretch: -1px;
       border: solid 10px $main-font-color;
       text-transform: uppercase;
       font-weight: bold;
@@ -40,6 +41,8 @@
 
     &_desc {
       max-width: 537px;
+      margin-top: 25px;
+      letter-spacing: 0.3px;
 
       @include description;
     }
@@ -63,11 +66,13 @@
     &_title {
 
       @include title;
-      margin: 28px 0;
+      margin: 18px 0 0 0;
+      letter-spacing: -0.6px;
     }
 
     &_desc {
-      margin: 14px 0 28px 0;
+      margin: 6px 0 18px 0;
+      letter-spacing: 0.6px;
       text-align: left;
 
       @include description($line-height: 1.88);
@@ -75,7 +80,8 @@
 
     &_button {
       align-self: flex-end;
-      margin: 0;
+      margin: 0 -1px;
+      letter-spacing: -0.2px;
 
       @include button;
     }

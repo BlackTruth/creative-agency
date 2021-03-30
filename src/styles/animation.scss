@@ -1,39 +1,47 @@
 @keyframes bounce {
+
   0% {
     top: 23px;
     left: 1px;
     animation-timing-function: ease-in;
   }
+
   37% {
     top: 0;
     left: 6px;
     animation-timing-function: ease-out;
   }
+
   55% {
     top: 23px;
     left: 10px;
     animation-timing-function: ease-in;
   }
+
   73% {
     top: 4px;
     left: 13px;
     animation-timing-function: ease-out;
   }
+
   82% {
     top: 23px;
     left: 15px;
     animation-timing-function: ease-in;
   }
+
   91% {
     top: 8px;
     left: 16px;
     animation-timing-function: ease-out;
   }
+
   96% {
     top: 23px;
     left: 17px;
     animation-timing-function: ease-in;
   }
+
   100% {
     top: 16px;
     left: 17px;

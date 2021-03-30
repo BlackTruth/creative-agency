@@ -6,7 +6,8 @@
   display: grid;
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 150px $wrapper-margin 0 $wrapper-margin;
+  margin: 139px $wrapper-margin 0 $wrapper-margin;
+  //grid-column-gap: 8px;
 
   &__header {
     display: flex;
@@ -16,14 +17,16 @@
     grid-row: 1;
 
     &_title {
+      left: -20px;
       margin: 0;
+      letter-spacing: -0.6px;
 
       @include title;
     }
 
     &_desc {
       max-width: 765px;
-      margin: 10px 0 101px 0;
+      margin: 10px 0 68px 0;
 
       @include description($font-size: 14px, $line-height: 1.71);
     }
@@ -35,29 +38,36 @@
     align-items: flex-start;
 
     &_title {
+      margin-top: 19px;
+      margin-bottom: 1px;
       font-size: 30px;
       line-height: 1.6;
+      letter-spacing: -0.6px;
       text-align: left;
       text-transform: uppercase;
       font-weight: bold;
     }
 
     &__list {
+
       @include list;
       font-size: 14px;
       text-transform: uppercase;
+
       &_item {
         width: max-content;
         margin-top: 20px;
-        line-height: 1.5;
         padding: 0 20px;
-        cursor: pointer;
+        line-height: 1.5;
         transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
         &--selected,
         &:hover {
-          background-color: $accent-color;
           color: $button-font-color;
+          background-color: $accent-color;
         }
+
         &:hover {
           transition: all 0.2s ease-in-out;
         }
@@ -73,18 +83,33 @@
     &__column {
       flex: 33.3%;
       max-width: 33.3%;
-      padding: 0 15px;
+      padding: 0 11px;
+
+      &:first-child {
+        padding-right: 15px;
+        padding-left: 8px;
+      }
+
+      &:nth-child(2) {
+        padding-right: 14px;
+        padding-left: 12px;
+      }
+
+      &:last-child {
+        padding-right: 0px;
+        padding-left: 15px;
+      }
 
       &_picture {
         width: 100%;
         margin-top: 30px;
-        vertical-align: middle;
-        transform: scale(1, 1);
         transition: all 0.3s ease-in-out;
+        transform: scale(1, 1);
+        vertical-align: middle;
 
         &:hover {
-          transform: scale(1.1, 1.1);
           transition: all 0.3s ease-in-out;
+          transform: scale(1.1, 1.1);
         }
       }
     }
