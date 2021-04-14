@@ -62,6 +62,15 @@
   &:hover::before {
     animation: bounce 1.5s, bounce 1.5s reverse 1.5s;
   }
+
+  @media screen and (max-width: 414px) {
+    font-size: 24px;
+
+    &::before {
+      top: 20px; 
+      height: 14px;
+    }
+  }
 }
 
 @mixin description($font-size: 16px, $line-height: 1.5) {

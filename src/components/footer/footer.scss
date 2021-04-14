@@ -70,4 +70,43 @@
       }
     }
   }
+
+  @media screen and (max-width: 1320px) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+  }
+
+  @media screen and (max-width: 945px) {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+
+    &__menu {
+      margin: 0 auto;
+    }
+
+    &__right {
+      margin: 0 auto;
+
+      &__social {
+        align-self: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-right: $wrapper-margin-medium;
+    margin-left: $wrapper-margin-medium;
+
+    &__menu {
+      flex-wrap: wrap;
+      justify-content: center;;
+    }
+  }
+
+  
+  @media screen and (max-width: 414px) {
+    margin-right: $wrapper-margin-small;
+    margin-bottom: 20px; 
+    margin-left: $wrapper-margin-small;
+  }
 }

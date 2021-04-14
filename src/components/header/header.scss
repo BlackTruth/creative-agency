@@ -33,4 +33,24 @@
       }
     }
   }
+
+  @media screen and (max-width: 750px) {
+
+    &__container {
+      margin-right: $wrapper-margin-medium;
+
+      margin-left: $wrapper-margin-medium;
+    }
+
+  }
+
+  @media screen and (max-width: 414px) { 
+
+    &__container {
+    margin-top: 20px;
+    margin-right: $wrapper-margin-small;
+
+    margin-left: $wrapper-margin-small;
+    }
+  }
 }
