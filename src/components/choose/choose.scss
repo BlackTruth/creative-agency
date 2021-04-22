@@ -1,0 +1,129 @@
+@import "../../styles/constants";
+
+@import "../../styles/mixins";
+
+.choose {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 0.9fr 1fr 1fr;
+  margin: 138px $wrapper-margin 0 $wrapper-margin;
+
+  &__header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_title {
+      left: -2px;
+      margin: 0;
+      letter-spacing: -1px;
+
+      @include title;
+    }
+
+    &_desc {
+      max-width: 717px;
+      margin: 10px 0 98px 0;
+      letter-spacing: 0.3px;
+
+      @include description($font-size: 14px, $line-height: 1.71);
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 18px;
+    text-transform: uppercase;
+
+    &_icon {
+      width: 32px;
+      filter: $main-font-color-filter;
+    }
+
+    &_title {
+      margin: 15px 0 17px 1px;
+      letter-spacing: -0.7px;
+    }
+
+    &_list {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      list-style-type: none;
+
+      @include description($font-size: 14px, $line-height: 2.2);
+
+      > li {
+        padding-left: 1px;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
+
+  &_image {
+    grid-column: 3;
+    grid-row: 2/4;
+  }
+
+  @media screen and (max-width: 1100px) {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 1fr;
+    
+    &__header {
+      grid-column: 1 / 3;
+      grid-row: 1; 
+
+      &_desc {
+        margin-bottom: 29px;
+      }
+    }
+
+    
+    &_image {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      margin: 0 auto;
+    }
+
+    &__options {
+      width: 240px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-right: $wrapper-margin-medium;
+    margin-left: $wrapper-margin-medium;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+    &__header {
+      grid-column: 1;
+      grid-row: 1; 
+    }
+
+    
+    &_image {
+      grid-column: 1;
+      grid-row: 2;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    margin-right: $wrapper-margin-small; 
+    margin-left: $wrapper-margin-small;
+  }
+}

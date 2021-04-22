@@ -1,0 +1,86 @@
+@import "constants";
+
+@mixin hovered-svg {
+  cursor: pointer;
+
+  &:hover {
+    filter: $accent-color-filter;
+    transition: filter 0.3s ease;
+  }
+}
+
+@mixin button($width: 165px, $invert: false) {
+  $color: $button-font-color;
+  $background: $accent-color;
+  $color-hover: $color;
+  $background-hover: darken($background, 10%);
+
+  @if $invert {
+    $color: $accent-color;
+    $background: $button-font-color;
+    $color-hover: darken($color, 10%);
+    $background-hover: $background;
+  }
+  width: $width;
+  height: 50px;
+  font-size: 14px;
+  color: $color;
+  background-color: $background;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $background-hover;
+
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+}
+
+@mixin title {
+  position: relative;
+  width: max-content;
+  font-size: 30px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: default;
+
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 1px;
+    z-index: -1;
+    width: 67px;
+    height: 21px;
+    background-color: $accent-color;
+    content: "";
+  }
+
+  &:hover::before {
+    animation: bounce 1.5s, bounce 1.5s reverse 1.5s;
+  }
+
+  @media screen and (max-width: 414px) {
+    font-size: 24px;
+
+    &::before {
+      top: 20px; 
+      height: 14px;
+    }
+  }
+}
+
+@mixin description($font-size: 16px, $line-height: 1.5) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: "OpenSans", sans-serif;
+}
+
+@mixin list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}

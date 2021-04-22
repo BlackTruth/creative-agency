@@ -1,0 +1,50 @@
+@import "normalize.css";
+
+@import "constants";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "animation";
+
+@import "../components/header/header";
+
+@import "../components/agency/agency";
+
+@import "../components/choose/choose";
+
+@import "../components/portfolio/portfolio";
+
+@import "../components/contactus/contactus";
+
+@import "../components/footer/footer";
+
+.app {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  &_background {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+    width: 100%;
+    max-width: inherit;
+    height: 100%;
+    background: url("../assets/images/background.png") center top / contain
+        no-repeat,
+      #ffffffd8;
+    filter: grayscale(100%);
+    background-blend-mode: color;
+  }
+}
+
+body {
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #60606e;
+  font-stretch: normal;
+}

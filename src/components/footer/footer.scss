@@ -1,0 +1,112 @@
+@import "../../styles/constants";
+
+@import "../../styles/mixins";
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin: 32px $wrapper-margin 50px $wrapper-margin;
+
+  &__menu {
+    display: flex;
+    padding: 0;
+    text-transform: uppercase;
+
+    @include description($font-size: 14px);
+
+    &_item {
+      display: inline;
+      align-self: flex-start;
+
+      a {
+
+        &:hover {
+          color: darken($accent-color, 10%);
+          transition: color 0.3s ease;
+        }
+        color: $alternate-font-color;
+        text-decoration: none;
+      }
+
+      &::after {
+        padding: 0 15px;
+        content: "-";
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+
+    &_copyright {
+      align-self: flex-end;
+      margin-bottom: 23px;
+      letter-spacing: 0.1px;
+      color: $alternate-font-color;
+      text-transform: uppercase;
+
+      @include description($font-size: 13px, $line-height: 1.7);
+    }
+
+    &__social {
+      align-self: flex-end;
+
+      &_item {
+        height: 16px;
+        filter: $social-media-color-filter;
+
+        &:not(&:last-child) {
+          padding-right: 12px;
+        }
+
+        @include hovered-svg;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1320px) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+  }
+
+  @media screen and (max-width: 945px) {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+
+    &__menu {
+      margin: 0 auto;
+    }
+
+    &__right {
+      margin: 0 auto;
+
+      &__social {
+        align-self: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-right: $wrapper-margin-medium;
+    margin-left: $wrapper-margin-medium;
+
+    &__menu {
+      flex-wrap: wrap;
+      justify-content: center;;
+    }
+  }
+
+  
+  @media screen and (max-width: 414px) {
+    margin-right: $wrapper-margin-small;
+    margin-bottom: 20px; 
+    margin-left: $wrapper-margin-small;
+  }
+}

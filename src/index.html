@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative agency</title>
+  </head>
+  <body class="app">
+    <div class="app_background"></div>
+    <%= require('html-loader!./components/header/header.html').default %>
+    <main>
+      <%= require('html-loader!./components/agency/agency.html').default %> <%=
+      require('html-loader!./components/choose/choose.html').default %> <%=
+      require('html-loader!./components/portfolio/portfolio.html').default %>
+      <%= require('html-loader!./components/contactus/contactus.html').default
+      %> <%= require('html-loader!./components/footer/footer.html').default %>
+    </main>
+    <footer></footer>
+  </body>
+</html>
